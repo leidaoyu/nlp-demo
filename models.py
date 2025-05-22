@@ -26,4 +26,5 @@ class MiniGPT(nn.Module):
             memory=memory,
             tgt_mask=tgt_mask
         )
-        return self.fc(out)
+        out = self.fc(out)
+        return out  # (seq_len, batch_size, vocab_size)
