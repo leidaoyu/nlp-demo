@@ -1,6 +1,6 @@
 {
-  "batch_size": 2,
+  "batch_size": 64,
   "lr": 0.001,
-  "epochs": 10,
-  "window_size": 8
+  "epochs": 100,
+  "window_size": 5
 }

@@ -2,8 +2,9 @@
 def build_vocab(corpus):
     words = []
     for text in corpus:
-        words.extend(list(text))  # 按字切分，适合中文
+        words.extend(list(text))
     vocab = list(set(words))
+    vocab = sorted(vocab)
     vocab = ['<pad>', '<bos>', '<eos>', '<unk>'] + vocab  # 添加特殊token
     word2idx = {w:i for i,w in enumerate(vocab)}
     # 保存词表到vocab.txt
